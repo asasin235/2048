@@ -459,3 +459,17 @@ function possibleMoves() {
   return false;
 }
 
+/**
+ * Method to check if the player has won the game.
+ * @return	returns true if any block contains "2048"
+ */
+ function wonGame() {
+  for (var x = 0; x <= 3; x++) {
+    for (var y = 0; y <= 3; y++) {
+      if (document.querySelector("#btn" + x + y + " " + "h1").textContent === "2048") { //checks if any element is "2048"
+        return true;
+      }
+    }
+  }
+  return false;
+}
